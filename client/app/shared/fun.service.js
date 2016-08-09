@@ -3,7 +3,7 @@
 	'use strict';
 
 	angular
-		.module('vit.shared')
+		.module('vit')
 		.factory('vitFunc', vitFunc);
 
 	vitFunc.$inject = [];

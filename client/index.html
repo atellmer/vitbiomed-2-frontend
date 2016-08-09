@@ -9,12 +9,12 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
-	<link rel="stylesheet" href="dist/bundle.css?rev=42646355b045bae9b1a35a9278f29a27">
+	<link rel="stylesheet" href="dist/bundle.css?rev=ccb1a67b56a569392dc717d87561a0e8">
 	<!--?rev=@@hash-->
 </head>
 
 <body class="likearts-content">
-	<div class="container-fluid">
+	<div class="container-fluid" ng-controller="SharedController as shared">
 
 	<header class="header">
 		<div class="container">
@@ -22,8 +22,55 @@
 
 				<div class="c-header__group">
 					<nav class="menu menu--mobile">
-						<div class="menu__btn">
+						<div 
+							hm-tap="shared.toggleVisibility('menu')" 
+							ng-class="{'menu__btn--is-open': shared.visibility.menu}" 
+							class="menu__btn">
 							<i class="menu__icon"></i>
+						</div>
+						<div ng-class="{'mobile-menu--is-open': shared.visibility.menu}" class="mobile-menu">
+							<ul class="mobile-menu__list">
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__list-link">Услуги и цены</a>
+								</li>
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__list-link mobile-menu__list-link--is-active">Клиники</a>
+									<div class="embeded-menu">
+										<ul class="embeded-menu__list">
+											<li class="embeded-menu__list-item">
+												<a href="#" class="embeded-menu__list-link">Раздел</a>
+											</li>
+											<li class="embeded-menu__list-item">
+												<a href="#" class="embeded-menu__list-link">Раздел</a>
+											</li>
+											<li class="embeded-menu__list-item">
+												<a href="#" class="embeded-menu__list-link embeded-menu__list-link--is-active">Раздел активный</a>
+											</li>
+											<li class="embeded-menu__list-item">
+												<a href="#" class="embeded-menu__list-link">Раздел</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__list-link">Врачи</a>
+								</li>
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__list-link">Программы</a>
+								</li>
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__list-link">Отзывы</a>
+								</li>
+							</ul>
+							<div class="mobile-menu__social">
+								<a href="#" target="_blank" class="mobile-menu__social-link mobile-menu__social-link--fb"></a>
+								<a href="#" target="_blank" class="mobile-menu__social-link mobile-menu__social-link--ig"></a>
+								<a href="#" target="_blank" class="mobile-menu__social-link mobile-menu__social-link--yt"></a>
+								<a href="#" target="_blank" class="mobile-menu__social-link mobile-menu__social-link--vk"></a>
+							</div>
+							<div class="mobile-menu__phone">
+								<span>8 800 355–23–94</span>
+							</div>
 						</div>
 					</nav>
 				</div>
@@ -154,7 +201,7 @@
 	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
 	<script src="bower_components/angular-aria/angular-aria.min.js"></script>
 	<script src="bower_components/angular-material/angular-material.min.js"></script>
-	<script src="dist/bundle.js?rev=ceceb01aca624b231236b0f5667761da"></script>
+	<script src="dist/bundle.js?rev=5f7b7d80daa37e2a212bc61e4347f8f7"></script>
 
 </body>
 

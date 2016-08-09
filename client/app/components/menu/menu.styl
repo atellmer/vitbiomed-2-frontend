@@ -18,6 +18,15 @@
 	}
 }
 
+@keyframes mobile-menu-motion {
+	0% {
+		transform translate(-100%, 0)
+	}
+	100% {
+		transform translate(0, 0)
+	}
+}
+
 .likearts-content .menu
 
 	&--mobile
@@ -34,6 +43,14 @@
 		width 64px
 		height 64px
 		cursor pointer
+		background-color #41a029
+		@media all and (min-width: $phone)
+			background-color #fff
+
+		&--is-open
+			background-color #54aa3f
+			@media all and (min-width: $phone)
+				background-color rgba(0, 0, 0, 0.08)
 	
 	&__icon
 		position absolute
@@ -126,6 +143,86 @@
 				color #fff 
 
 
+	.mobile-menu
+		position absolute
+		visibility hidden
+		background-color #fff
+		@extend .paper-shadow-z1
+		font-size 1.8rem
+		transform-origin 0 0
+
+		&--is-open
+			visibility visible
+			animation mobile-menu-motion .2s 1 ease-in-out 
+
+		&__list
+			padding 16px 0
+			margin 0
+			list-style none
+			
+		&__list-item
+			padding 8px 24px
+		
+		&__list-link
+			color $p-color-text
+			white-space nowrap
+
+			&--is-active
+				color $s-color-text
+
+
+		&__social
+			@extend .flex
+			padding 24px
+			border-top 1px solid #e0e0e0
+			@media all and (min-width: $phone)
+				display none
+
+		&__social-link
+			display block
+			width 32px
+			height 32px
+			@extend .cover
+			margin 0 8px
+
+			&--fb
+				background-image url(../resources/icons/fb-b.svg)
+
+			&--ig
+				background-image url(../resources/icons/ig-b.svg)
+
+			&--yt
+				background-image url(../resources/icons/yt-b.svg)
+
+			&--vk
+				background-image url(../resources/icons/vk-b.svg)
+
+		&__phone
+			height auto
+			min-height 100px
+			@extend .flex
+			background-color #54aa3f
+			color #fff
+			padding 32px
+			@media all and (min-width: $phone)
+				display none
+
+
+	.embeded-menu
+
+		&__list
+			list-style none
+			margin 0
+			padding-top 16px
+
+		&__list-item
+			padding 2px 0
+
+		&__list-link
+			color $p-color-text
+
+			&--is-active
+				color $p-color
 
 
 
