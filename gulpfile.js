@@ -151,7 +151,11 @@ gulp.task('image-min', function () {
 //watch
 gulp.task('watch', function () {
 	gulp.watch(path.app() + '**/*.js', ['component-scripts', 'hash-files']);
-	gulp.watch(path.components() + '**/*.styl', ['component-styles', 'hash-files']);
+	gulp.watch([
+		path.shared() + '**/shared.styl',
+		path.components() + '**/*.styl',
+		path.pages() + '**/*.styl',
+	], ['component-styles', 'hash-files']);
 	gulp.watch(path.root + '**/*.html', ['component-templates']);
 	gulp.watch(path.icons() + 'source/**/*.{jpg,jpeg,png}', ['sprite']);
 });

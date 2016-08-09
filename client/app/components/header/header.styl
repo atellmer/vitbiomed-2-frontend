@@ -3,5 +3,182 @@
 .likearts-content .header
 	width 100%
 	height auto
-	min-height 100px
-	@extend .paper-shadow-z1
+	min-height 60px
+	background-color #41a029
+	@extend .flex, .paper-shadow-z1
+	@media all and (min-width: $phone)
+		min-height 100px
+		background-color #fff
+		padding 0 15px
+	@media all and (min-width: 1200px)
+		padding 0
+
+
+	.c-header
+		position relative
+		@extend .flex
+		justify-content space-between
+
+	.c-group
+		@extend .flex
+		justify-content space-between
+
+
+.likearts-content .logo
+	@extend .cover	
+	width 184.5px
+	height 32px
+	background-image url(../resources/img/logo-mobile.png)
+	@media all and (max-width: 320px)
+		width 123px
+		height 21.3px
+	@media all and (min-width: $phone)
+		width 227px
+		height 40px
+		background-image url(../resources/img/logo-desktop.png)
+
+
+.likearts-content .menu
+
+	&--mobile
+		@media all and (min-width: $notebook)
+			display none
+
+	&--desktop
+		margin-right 100px
+		@media all and (max-width: $notebook)
+			display none
+	
+	&__btn	
+		position relative
+		width 64px
+		height 64px
+		cursor pointer
+	
+	&__icon
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		@extend .cover
+		width 32px
+		height 32px	
+		background-image url(../resources/icons/hamburger-w.svg)
+		@media all and (min-width: $phone)
+			background-image url(../resources/icons/hamburger-g.svg)
+
+	&__list
+		@extend .flex
+		justify-content space-between
+		padding 0
+		list-style none
+		margin 0
+
+	&__list-item
+		font-size 1.6rem
+
+	&__list-link
+		@extend .transition
+		padding 8px 24px
+		color $p-color-text
+		@media all and (max-width: 1140px)
+			padding 8px
+		&:hover
+			color $p-color 
+
+		&--is-active
+			color #f57c00
+			&:hover
+				color #f57c00
+
+
+.likearts-content .search
+	position relative
+	display none
+	@media all and (min-width: $phone)
+		display block
+	@media all and (min-width: $notebook)
+		position absolute
+		top 0
+		right 0
+
+	&__btn
+		position relative
+		width 64px
+		height 64px
+		cursor pointer
+		@media all and (min-width: $notebook)
+			position absolute
+			top 6px
+			left 6px
+			width 24px
+			height 24px
+			cursor default
+
+	&__icon
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		width 24px
+		height 24px
+		@extend .cover
+		background-image url(../resources/icons/search-g.svg)
+		@media all and (min-width: $notebook)
+			background-image url(../resources/icons/search-b.svg)
+
+	&__input
+		outline none
+		border 0
+		padding 8px 8px 8px 32px
+		border-radius 18px
+		width 100px
+		@extend .transition
+		&:focus
+			width 200px
+			outline none
+			@extend .paper-shadow-z1
+
+		&::-webkit-input-placeholder
+			transform translate(0, 2px)
+
+		&::-moz-placeholder
+			transform translate(0, 2px)
+
+		&:-moz-placeholder
+			transform translate(0, 2px)
+
+		&:-ms-input-placeholder
+			transform translate(0, 2px)
+		@media all and (max-width: $notebook)
+			display none
+
+.likearts-content .enter
+	position relative
+	display block
+	@media all and (min-width: $notebook)
+		display none
+
+	&__btn
+		display block
+		position relative
+		width 64px
+		height 64px
+		@media all and (min-width: $notebook)
+			position absolute
+			top 6px
+			left 6px
+			width 24px
+			height 24px
+
+	&__icon
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		width 24px
+		height 24px
+		@extend .cover
+		background-image url(../resources/icons/enter-w.png)
+		@media all and (min-width: $phone)
+			background-image url(../resources/icons/enter-g.png)

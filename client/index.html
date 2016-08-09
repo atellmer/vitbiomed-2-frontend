@@ -5,10 +5,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
 	<title>Vit 2 App</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
-	<link rel="stylesheet" href="dist/bundle.css?rev=47dfb794570444f69ec90062ae100cd8">
+	<link rel="stylesheet" href="dist/bundle.css?rev=add96a6e76c14ffeda328b7060566aeb">
 	<!--?rev=@@hash-->
 </head>
 
@@ -16,7 +17,55 @@
 	<div class="container-fluid">
 
 	<header class="header">
-		
+		<div class="container">
+			<div class="c-header">
+				<nav class="menu menu--mobile">
+					<div class="menu__btn">
+						<div class="menu__icon"></div>
+					</div>
+				</nav>
+				
+				<div class="logo"></div>
+
+				<nav class="menu menu--desktop">
+					<ul class="menu__list">
+						<li class="menu__list-item">
+							<a href="#" class="menu__list-link menu__list-link--is-active">Услуги и цены</a>
+						</li>
+						<li class="menu__list-item">
+							<a href="#" class="menu__list-link">Клиники</a>
+						</li>
+						<li class="menu__list-item">
+							<a href="#" class="menu__list-link">Врачи</a>
+						</li>
+						<li class="menu__list-item">
+							<a href="#" class="menu__list-link">Программы</a>
+						</li>
+						<li class="menu__list-item">
+							<a href="#" class="menu__list-link">Отзывы</a>
+						</li>
+						<li class="menu__list-item">
+							<a href="#" class="menu__list-link">Войти</a>
+						</li>
+
+					</ul>
+				</nav>
+
+				<div class="c-group">
+					<div class="enter">
+						<a href="#" class="enter__btn">
+							<i class="enter__icon"></i>
+						</a>
+					</div>
+					<div class="search">
+						<div class="search__btn">
+							<i class="search__icon"></i>
+						</div>
+						<input type="text" class="search__input" placeholder="Поиск">
+					</div>
+				</div>
+			</div>
+		</div>
 	</header>
 
 	</div>
