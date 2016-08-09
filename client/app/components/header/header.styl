@@ -19,9 +19,9 @@
 		@extend .flex
 		justify-content space-between
 
-	.c-group
-		@extend .flex
-		justify-content space-between
+		&__group
+			@extend .flex
+			justify-content space-between
 
 
 .likearts-content .logo
@@ -36,60 +36,6 @@
 		width 227px
 		height 40px
 		background-image url(../resources/img/logo-desktop.png)
-
-
-.likearts-content .menu
-
-	&--mobile
-		@media all and (min-width: $notebook)
-			display none
-
-	&--desktop
-		margin-right 100px
-		@media all and (max-width: $notebook)
-			display none
-	
-	&__btn	
-		position relative
-		width 64px
-		height 64px
-		cursor pointer
-	
-	&__icon
-		position absolute
-		top 50%
-		left 50%
-		transform translate(-50%, -50%)
-		@extend .cover
-		width 32px
-		height 32px	
-		background-image url(../resources/icons/hamburger-w.svg)
-		@media all and (min-width: $phone)
-			background-image url(../resources/icons/hamburger-g.svg)
-
-	&__list
-		@extend .flex
-		justify-content space-between
-		padding 0
-		list-style none
-		margin 0
-
-	&__list-item
-		font-size 1.6rem
-
-	&__list-link
-		@extend .transition
-		padding 8px 24px
-		color $p-color-text
-		@media all and (max-width: 1140px)
-			padding 8px
-		&:hover
-			color $p-color 
-
-		&--is-active
-			color #f57c00
-			&:hover
-				color #f57c00
 
 
 .likearts-content .search

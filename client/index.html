@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
-	<link rel="stylesheet" href="dist/bundle.css?rev=add96a6e76c14ffeda328b7060566aeb">
+	<link rel="stylesheet" href="dist/bundle.css?rev=42646355b045bae9b1a35a9278f29a27">
 	<!--?rev=@@hash-->
 </head>
 
@@ -19,39 +19,116 @@
 	<header class="header">
 		<div class="container">
 			<div class="c-header">
-				<nav class="menu menu--mobile">
-					<div class="menu__btn">
-						<div class="menu__icon"></div>
-					</div>
-				</nav>
+
+				<div class="c-header__group">
+					<nav class="menu menu--mobile">
+						<div class="menu__btn">
+							<i class="menu__icon"></i>
+						</div>
+					</nav>
+				</div>
 				
-				<div class="logo"></div>
+				<div class="c-header__group">
+					<div class="logo"></div>
+				</div>
 
-				<nav class="menu menu--desktop">
-					<ul class="menu__list">
-						<li class="menu__list-item">
-							<a href="#" class="menu__list-link menu__list-link--is-active">Услуги и цены</a>
-						</li>
-						<li class="menu__list-item">
-							<a href="#" class="menu__list-link">Клиники</a>
-						</li>
-						<li class="menu__list-item">
-							<a href="#" class="menu__list-link">Врачи</a>
-						</li>
-						<li class="menu__list-item">
-							<a href="#" class="menu__list-link">Программы</a>
-						</li>
-						<li class="menu__list-item">
-							<a href="#" class="menu__list-link">Отзывы</a>
-						</li>
-						<li class="menu__list-item">
-							<a href="#" class="menu__list-link">Войти</a>
-						</li>
+				<div class="c-header__group">
+					<nav class="menu menu--desktop">
+						<ul class="menu__list">
+							<li class="menu__list-item">
+								<a href="#" class="menu__list-link menu__list-link--is-active">Услуги и цены</a>
+								<div class="hover-menu hover-menu--lvl-1">
+									<ul class="hover-menu__list">
+										<li class="hover-menu__list-item">
+											<a href="#" class="hover-menu__list-link">Медицинские услуги</a>
+											<div class="hover-menu hover-menu--lvl-2">
+												<ul class="hover-menu__list">
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Терапия</a>
+													</li>
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Педиатрия</a>
+													</li>
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Отолангирология</a>
+													</li>
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Терапия</a>
+													</li>
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Отоларингология</a>
+													</li>
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Семейная медицина</a>
+													</li>
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Хирургия</a>
+													</li>
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Неврология</a>
+													</li>
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Эндокринология</a>
+													</li>
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Физиотерапия</a>
+													</li>
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Гинекология</a>
+													</li>
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Урология</a>
+													</li>
+													<li class="hover-menu__list-item">
+														<a href="#" class="hover-menu__list-link">Функциональная диагностика</a>
+													</li>
+												</ul>
+											</div>
+										</li>	
+										<li class="hover-menu__list-item">
+											<a href="#" class="hover-menu__list-link">Анализы</a>
+										</li>
+										<li class="hover-menu__list-item">
+											<a href="#" class="hover-menu__list-link">Check-up</a>
+										</li>
+										<li class="hover-menu__list-item">
+											<a href="#" class="hover-menu__list-link">Годовое обслуживание</a>
+										</li>
+										<li class="hover-menu__list-item">
+											<a href="#" class="hover-menu__list-link">Программы прикрепления ОМС+</a>
+										</li>
+										<li class="hover-menu__list-item">
+											<a href="#" class="hover-menu__list-link">Ведение беременности</a>
+										</li>
+										<li class="hover-menu__list-item">
+											<a href="#" class="hover-menu__list-link">Вызов врача на дом</a>
+										</li>
+										<li class="hover-menu__list-item">
+											<a href="#" class="hover-menu__list-link">Справки, больничные</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="menu__list-item">
+								<a href="#" class="menu__list-link">Клиники</a>
+							</li>
+							<li class="menu__list-item">
+								<a href="#" class="menu__list-link">Врачи</a>
+							</li>
+							<li class="menu__list-item">
+								<a href="#" class="menu__list-link">Программы</a>
+							</li>
+							<li class="menu__list-item">
+								<a href="#" class="menu__list-link">Отзывы</a>
+							</li>
+							<li class="menu__list-item">
+								<a href="#" class="menu__list-link">Войти</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 
-					</ul>
-				</nav>
-
-				<div class="c-group">
+				<div class="c-header__group">
 					<div class="enter">
 						<a href="#" class="enter__btn">
 							<i class="enter__icon"></i>

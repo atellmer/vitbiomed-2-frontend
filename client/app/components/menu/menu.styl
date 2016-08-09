@@ -1,0 +1,131 @@
+@import 'nib'
+
+@keyframes hover-menu-lvl-1-motion {
+	0% {
+		transform scale(1, 0)
+	}
+	100% {
+		transform scale(1, 1)
+	}
+}
+
+@keyframes hover-menu-lvl-2-motion {
+	0% {
+		transform scale(0, 1)
+	}
+	100% {
+		transform scale(1, 1)
+	}
+}
+
+.likearts-content .menu
+
+	&--mobile
+		@media all and (min-width: $notebook)
+			display none
+
+	&--desktop
+		margin-right 100px
+		@media all and (max-width: $notebook)
+			display none
+	
+	&__btn	
+		position relative
+		width 64px
+		height 64px
+		cursor pointer
+	
+	&__icon
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		@extend .cover
+		width 32px
+		height 32px	
+		background-image url(../resources/icons/hamburger-w.svg)
+		@media all and (min-width: $phone)
+			background-image url(../resources/icons/hamburger-g.svg)
+
+	&__list
+		@extend .flex
+		justify-content space-between
+		padding 0
+		list-style none
+		margin 0
+
+	&__list-item
+		font-size 1.6rem
+		&:hover
+			.hover-menu--lvl-1
+				visibility visible
+				opacity 1
+				animation hover-menu-lvl-1-motion .2s 1 ease-in-out 
+
+	&__list-link
+		@extend .transition
+		padding 8px 24px
+		color $p-color-text
+		white-space nowrap
+		@media all and (max-width: 1140px)
+			padding 8px
+		&:hover
+			color $p-color 
+
+		&--is-active
+			color #f57c00
+			&:hover
+				color #f57c00
+
+	.hover-menu
+		position absolute
+		visibility hidden
+		@extend .transition
+		opacity 0
+		transform-origin 0 0
+		font-size 1.3rem
+		border-radius 3px
+		&:hover
+			visibility visible
+			opacity 1
+
+		&--lvl-1
+			background-color rgba(245, 124, 0, 0.8);
+			.hover-menu__list-item:hover > .hover-menu__list-link
+				border-bottom 1px solid #fff
+
+
+		&--lvl-2
+			background-color rgba(0, 0, 0, 0.8);
+			top 0px
+			left 100%
+			.hover-menu__list-item:hover > .hover-menu__list-link
+				border-bottom 1px solid #fff
+
+		&__list
+			list-style none
+			padding 0
+			margin 0
+			padding 12px 0
+			color #fff
+			font-weight 300
+
+		&__list-item
+			padding 8px 24px
+			&:hover
+				.hover-menu--lvl-2
+					visibility visible
+					opacity 1
+					animation hover-menu-lvl-2-motion .2s 1 ease-in-out 
+				
+
+		&__list-link
+			color #fff
+			white-space nowrap
+			&:hover
+				color #fff 
+
+
+
+
+
