@@ -18,12 +18,24 @@
 	}
 }
 
-@keyframes mobile-menu-motion {
+@keyframes mobile-menu-show-motion {
 	0% {
+		opacity 0
 		transform translate(-100%, 0)
 	}
 	100% {
+		opacity 1
 		transform translate(0, 0)
+	}
+}
+@keyframes mobile-menu-hide-motion {
+	0% {
+		opacity 1
+		transform translate(0, 0)
+	}
+	100% {
+		opacity 0
+		transform translate(-100%, 0)
 	}
 }
 
@@ -145,15 +157,19 @@
 
 	.mobile-menu
 		position absolute
-		visibility hidden
 		background-color #fff
 		@extend .paper-shadow-z1
 		font-size 1.8rem
 		transform-origin 0 0
+		transform translate(-200%, 0)
 
 		&--is-open
-			visibility visible
-			animation mobile-menu-motion .2s 1 ease-in-out 
+			transform translate(0, 0)
+			animation mobile-menu-show-motion .2s 1 ease-in-out 
+
+		&--is-close
+			transform translate(-200%, 0)
+			animation mobile-menu-hide-motion .2s 1 ease-in-out 
 
 		&__list
 			padding 16px 0

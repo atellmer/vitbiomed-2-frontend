@@ -15,6 +15,7 @@
 		vm.visibility = {
 			menu: false,
 		};
+		vm.menuActivate = false;
 
 		vm.toggleVisibility = toggleVisibility;
 
@@ -28,6 +29,7 @@
 			switch (type) {
 				case 'menu': {
 					vm.visibility.menu = !vm.visibility.menu;
+					vm.menuActivate = true;
 				}
 			}
 		}

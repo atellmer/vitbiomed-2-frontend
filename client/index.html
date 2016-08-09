@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
-	<link rel="stylesheet" href="dist/bundle.css?rev=ccb1a67b56a569392dc717d87561a0e8">
+	<link rel="stylesheet" href="dist/bundle.css?rev=e3590c3659becb4527feb8f2a0b8ffe8">
 	<!--?rev=@@hash-->
 </head>
 
@@ -28,7 +28,10 @@
 							class="menu__btn">
 							<i class="menu__icon"></i>
 						</div>
-						<div ng-class="{'mobile-menu--is-open': shared.visibility.menu}" class="mobile-menu">
+						<div ng-class="{
+							'mobile-menu--is-open': shared.visibility.menu,
+							'mobile-menu--is-close': !shared.visibility.menu && shared.menuActivate}" 
+							class="mobile-menu">
 							<ul class="mobile-menu__list">
 								<li class="mobile-menu__list-item">
 									<a href="#" class="mobile-menu__list-link">Услуги и цены</a>
