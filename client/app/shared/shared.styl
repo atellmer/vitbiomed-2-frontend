@@ -53,13 +53,19 @@ $container-width = 1170px
 	align-items center
 	
 .visible-hide
-	position absolute!important
-	visibility hidden!important
+	position absolute
+	visibility hidden
 	
 .visible-show
-	position relative!important
-	visibility visible!important
-	
+	position relative
+	visibility visible
+
+.only-desktop-visible	
+	@media all and (max-width: $notebook)
+		position absolute
+		visibility hidden
+
+
 .transition
 	transition all .2s ease-in-out
 	

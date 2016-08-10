@@ -38,67 +38,6 @@
 		background-image url(../resources/img/logo-desktop.png)
 
 
-.likearts-content .search
-	position relative
-	display none
-	@media all and (min-width: $phone)
-		display block
-	@media all and (min-width: $notebook)
-		position absolute
-		top 0
-		right 0
-
-	&__btn
-		position relative
-		width 64px
-		height 64px
-		cursor pointer
-		@media all and (min-width: $notebook)
-			position absolute
-			top 6px
-			left 6px
-			width 24px
-			height 24px
-			cursor default
-
-	&__icon
-		position absolute
-		top 50%
-		left 50%
-		transform translate(-50%, -50%)
-		width 24px
-		height 24px
-		@extend .cover
-		background-image url(../resources/icons/search-g.svg)
-		@media all and (min-width: $notebook)
-			background-image url(../resources/icons/search-b.svg)
-
-	&__input
-		outline none
-		border 0
-		padding 8px 8px 8px 32px
-		border-radius 18px
-		width 100px
-		@extend .transition
-		&:focus
-			width 200px
-			outline none
-			@extend .paper-shadow-z1
-
-		&::-webkit-input-placeholder
-			transform translate(0, 2px)
-
-		&::-moz-placeholder
-			transform translate(0, 2px)
-
-		&:-moz-placeholder
-			transform translate(0, 2px)
-
-		&:-ms-input-placeholder
-			transform translate(0, 2px)
-		@media all and (max-width: $notebook)
-			display none
-
 .likearts-content .enter
 	position relative
 	display block
