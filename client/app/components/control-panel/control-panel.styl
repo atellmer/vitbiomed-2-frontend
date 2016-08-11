@@ -1,0 +1,118 @@
+@import 'nib'
+
+@keyframes hover-select-motion {
+	0% {
+		transform scale(1, 0)
+	}
+	100% {
+		transform scale(1, 1)
+	}
+}
+
+.likearts-content .control-panel
+	position absolute
+	z-index 1
+	width 100%
+	height auto
+	min-height 60px
+	padding 8px 0
+	background-color rgba(255, 255, 255, 0.9)
+	@extend .flex, .paper-shadow-z1
+	@media all and (min-width: $phone)
+		padding 0 15px
+	@media all and (min-width: 1200px)
+		padding 0
+
+
+	.c-panel
+		@extend .flex
+		justify-content space-between
+
+		&__group
+			flex-grow 1
+
+		.c-btn
+			@extend .flex
+			justify-content flex-start
+			@media all and (max-width: $phone)
+				flex-flow column wrap
+				justify-content center
+
+		.address
+			position relative
+			@extend .flex
+			justify-content flex-start
+			@media all and (max-width: 900px)
+				display none
+			&__sign
+				margin-right 5px
+				@media all and (max-width: 1200px)
+					display none
+
+			&__selected
+				position relative
+				cursor pointer
+				color $p-color
+				&:hover
+					.hover-select
+						visibility visible
+						opacity 1
+						animation hover-select-motion .2s 1 ease-in-out 
+
+			&__icon
+				position relative
+				top 3px
+				line-height 0
+				font-size 1.3rem
+
+		.phone
+			&__sign
+				@media all and (max-width: 1200px)
+					display none
+
+		.time
+			position relative
+			color $p-color
+			margin-left 20px
+
+
+			&__icon
+				position relative
+				top 4px
+				display inline-block
+				width 18px
+				height 18px
+				@extend .cover
+				background-image url(../resources/icons/clock-g.svg)
+
+				
+.likearts-content .hover-select
+	position absolute
+	z-index 100
+	visibility hidden
+	@extend .transition
+	opacity 0
+	transform-origin 0 0
+	font-size 1.3rem
+	border-radius 3px
+	background-color rgba(104, 159, 56, 0.9)
+	&:hover
+		visibility visible
+		opacity 1
+
+	&__list
+		list-style none
+		padding 0
+		margin 0
+		padding 12px 0
+		color #fff
+		font-weight 300
+
+	&__list-item
+		padding 8px 24px
+		white-space nowrap
+		cursor pointer
+		&:hover
+			.hover-select__list-link
+				border-bottom 1px solid #fff
+

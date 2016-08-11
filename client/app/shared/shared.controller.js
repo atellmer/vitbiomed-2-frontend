@@ -39,7 +39,7 @@
 					break;
 				}
 				default: {
-					console.error('This type of toggleVisibility() does not exist');
+					console.error('This type of toggleVisibility() does not exist!');
 				}
 			}
 		}

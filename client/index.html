@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
-	<link rel="stylesheet" href="dist/bundle.css?rev=a5f8d21c9c5786fea02bfdf0523d6409">
+	<link rel="stylesheet" href="dist/bundle.css?rev=7c0aae038d573516e37c6f5c034f2513">
 	<!--?rev=@@hash-->
 </head>
 
@@ -20,7 +20,7 @@
 		<div class="container">
 			<div class="c-header">
 
-				<div class="c-header__group">
+				<div class="c-header__group only-mobile-visible">
 					<nav class="menu menu--mobile">
 						<div 
 							hm-tap="shared.toggleVisibility('MENU')" 
@@ -206,7 +206,55 @@
 		</div>
 		<input ng-model="shared.search" type="text" class="phone-search__input" placeholder="Поиск">
 	</div>
-	
+
+	<div class="control-panel">
+		<div class="container">
+			<div class="c-panel">
+				<div class="c-panel__group only-desktop-visible">
+					<div class="address">
+						<div class="address__sign">Ближайшая клиника:</div>
+						<div class="address__selected">
+							<span>Москва, Новорогожская, 8</span>
+							<i class="material-icons address__icon">arrow_drop_down</i>
+							<div class="hover-select">
+								<ul class="hover-select__list">
+									<li class="hover-select__list-item">
+										<span class="hover-select__list-link">Москва, Новорогожская, 8</span>
+									</li>
+									<li class="hover-select__list-item">
+										<span class="hover-select__list-link">Москва, Адрес, 2</span>
+									</li>
+									<li class="hover-select__list-item">
+										<span class="hover-select__list-link">Москва, Адрес, 3</span>
+									</li>
+									<li class="hover-select__list-item">
+										<span class="hover-select__list-link">Москва, Адрес, 4</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="c-panel__group">
+					<div class="c-btn">
+						<button class="btn vit-btn">Вызвать врача</button>
+						<button class="btn vit-btn">Записаться на прием</button>
+					</div>
+				</div>
+				<div class="c-panel__group without-phone-visible">
+					<span class="phone">
+						<span class="phone__sign">Телефон горячей линии</span> 
+						<span class="phone__number">8 800 666-66-66</span>
+					</span>
+					<span class="time">
+						<i class="time__icon"></i>
+						<span class="time__sign">24/7</span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	</div>
 
@@ -217,7 +265,7 @@
 	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
 	<script src="bower_components/angular-aria/angular-aria.min.js"></script>
 	<script src="bower_components/angular-material/angular-material.min.js"></script>
-	<script src="dist/bundle.js?rev=7cfd86b20edd6ca090ceb8f4c5e89449"></script>
+	<script src="dist/bundle.js?rev=599d415c46f30cc3cbf1941b6f468dcd"></script>
 
 </body>
 
