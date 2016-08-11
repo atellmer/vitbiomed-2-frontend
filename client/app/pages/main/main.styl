@@ -4,13 +4,19 @@
 .likearts-content .main-page
 	.slider
 		width 100%
+		@media all and (max-width: $phone)
+			display none
 
 		&__item
 			width 100%
 			height auto
-			min-height 570px
 			@extend .flex, .cover
 			justify-content flex-start
+			@media all and (min-width: $phone)
+				min-height 400px
+			@media all and (min-width: $notebook)
+				min-height 570px
+			
 			
 
 
