@@ -62,23 +62,19 @@ $container-width = 1170px
 
 .only-desktop-visible	
 	@media all and (max-width: $notebook)
-		position absolute
-		visibility hidden
+		display none!important
 
 .only-mobile-visible	
 	@media all and (min-width: $notebook)
-		position absolute
-		visibility hidden
+		display none!important
 
 .only-phone-visible	
 	@media all and (min-width: $phone)
-		position absolute
-		visibility hidden
+		display none!important
 
 .without-phone-visible	
 	@media all and (max-width: $phone)
-		position absolute
-		visibility hidden
+		display none!important
 
 
 .transition
