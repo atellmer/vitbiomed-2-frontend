@@ -1,0 +1,86 @@
+@import 'nib'
+
+
+@keyframes slide-left-motion {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%);
+	}
+	40% {
+		opacity: 0.2;
+	}
+	80% {
+    	opacity: 0.4;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+@keyframes slide-right-motion {
+	0% {
+		opacity: 0;
+		transform: translateX(50%);
+	}
+	40% {
+		opacity: 0.2;
+	}
+	80% {
+    	opacity: 0.4;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+.likearts-content vit-slider
+	width 100%
+	height auto
+
+.likearts-content ng-transclude
+	width calc(100% - 140px)
+	height auto
+
+.likearts-content .vit-slider
+	position relative
+	width 100%
+	background-color #fff
+
+	&__content
+		position relative
+		@extend .flex
+		min-height 200px
+
+	&__btn
+		position absolute
+		width 60px
+		height 60px
+		border-radius 50%
+		border 2px solid #4e4e4e
+		cursor pointer
+		top 50%
+		transform translateY(-50%)
+	
+		&--prev
+			left 0px
+	
+		&--next
+			right 0px
+	
+	&__icon
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+	
+
+	.js-slide-left
+		animation slide-left-motion .9s 1 ease-in-out
+
+	.js-slide-right
+		animation slide-right-motion .9s 1 ease-in-out
+
+	.js-display-hide
+		display none!important
