@@ -18,14 +18,22 @@
 		};
 		vm.menuActivate = false;
 		vm.search = '';
+		vm.select = {
+			clinic: '',
+		}; 
 
 		vm.toggleVisibility = toggleVisibility;
+		vm.setSelectedClinic = setSelectedClinic;
 
 		activate();
 
 		////////////////
 
 		function activate() { }
+
+		function setSelectedClinic(clinic) {
+			vm.select.clinic = clinic;
+		}
 
 		function toggleVisibility(type) {
 			switch (type) {
