@@ -40,8 +40,10 @@
 	height auto
 
 .likearts-content ng-transclude
-	width calc(100% - 140px)
+	width calc(100% - 110px)
 	height auto
+	@media all and (min-width: $phone)
+		width calc(100% - 140px)
 
 .likearts-content .vit-slider
 	position relative
@@ -55,19 +57,26 @@
 
 	&__btn
 		position absolute
-		width 60px
-		height 60px
+		width 30px
+		height 30px
 		border-radius 50%
 		border 2px solid #4e4e4e
 		cursor pointer
 		top 50%
 		transform translateY(-50%)
+		@media all and (min-width: $phone)
+			width 60px
+			height 60px
 	
 		&--prev
-			left 0px
+			left 15px
+			@media all and (min-width: $phone)
+				left 0
 	
 		&--next
-			right 0px
+			right 15px
+			@media all and (min-width: $phone)
+				right 0
 	
 	&__icon
 		position absolute
