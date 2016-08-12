@@ -2,6 +2,26 @@
 (function () {
 	'use strict';
 
+	var template = [
+		'<div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{ $ctrl.url }}" class="vit-location">',
+		'<ng-map center="{{ ::$ctrl.center }}" zoom="{{ ::$ctrl.zoom }}" styles="{{ ::$ctrl.styles }}" class="vit-location__frame">',
+		'<custom-marker position="[{{ clinic.address }}]" ng-repeat="clinic in $ctrl.clinics track by $index">',
+		'<div>',
+		'<div class="vit-location__marker">',
+		'<div class="vit-location__tooltip">',
+		'<span class="vit-location__title">Ближайшая к вам клиника:</span>',
+		'<br>',
+		'<span class="vit-location__address">{{ clinic.address }}</span>',
+		'<br>',
+		'<span class="vit-location__phone">{{ clinic.phone }}</span>',
+		'</div>',
+		'</div>',
+		'</div>',
+		'</custom-marker>',
+		'</ng-map>',
+		'</div>',
+	].join('');
+
 	angular
 		.module('vit.components')
 		.component('vitLocation', {
@@ -10,7 +30,7 @@
 				zoom: '<',
 				clinics: '<',
 			},
-			templateUrl: '../app/components/location/location.html',
+			template: template,
 			controller: ['NgMap', controller],
 		});
 
