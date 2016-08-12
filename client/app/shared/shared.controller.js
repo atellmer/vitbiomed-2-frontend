@@ -3,7 +3,7 @@
 'use strict';
 
 	angular
-		.module('vit')
+		.module('vit.shared')
 		.controller('SharedController', SharedController);
 
 	SharedController.$inject = [];

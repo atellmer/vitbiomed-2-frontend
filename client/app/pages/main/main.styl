@@ -1,6 +1,5 @@
 @import 'nib'
 
-
 .likearts-content .main-page
 	.slider
 		width 100%
@@ -55,8 +54,114 @@
 			@media all and (min-width: 1200px)
 				font-size 2rem
 
+
+	.links
+		margin 0
+		@media all and (min-width: $phone)
+			margin 60px 0
+			padding 0 15px
+		@media all and (min-width: 1200px)
+			padding 0
+
+		.c-links
+			@extend .flex
+			justify-content space-between
+			align-items stretch
+
+			&__group
+				@extend .flex
+				justify-content flex-start
+				align-items flex-start
+				@media all and (max-width: $phone)
+					width 100%
+
+		&__item
+			@extend .flex
+			justify-content flex-start
+			align-items stretch
+			margin 20px 0
+			padding 15px
+			@media all and (max-width: $phone)
+				width 100%
+				margin 5px 0
+				padding 0 15px
+			@media all and (min-width: $phone)
+				padding 15px 15px 15px 0
+			@media all and (min-width: $notebook)
+				flex-flow row nowrap
+
+		&__item-pic
+			width 64px
+			height 64px
+			@extend .cover
+			@media all and (max-width: $phone)
+				display none
+
+			&--doc
+				background-image url(../resources/icons/doc-g.svg)
+
+			&--scope
+				background-image url(../resources/icons/scope-g.svg)
+
+			&--attach
+				background-image url(../resources/icons/attach-g.svg)
+
+			&--complex
+				background-image url(../resources/icons/complex-g.svg)
+
+			&--add
+				background-image url(../resources/icons/add-g.svg)
+
+		&__item-content
+			margin 30px 0
+			width 100%
+			@media all and (max-width: $phone)
+				margin 0
+			@media all and (min-width: $notebook)
+				margin 0 0 0 30px
+				flex 1
+
+		&__item-title
+			position relative
+			font-size 2.3rem
+			margin-bottom 20px
+			cursor pointer
+			@media all and (min-width: $phone)
+				font-size 1.8rem
+				cursor default
+
+			&:before
+				content ''
+				display inline-block
+				position relative
+				top 7px
+				left 0
+				width 30px
+				height 30px
+				margin-right 10px	
+				border-radius 50%
+				border 1px solid $p-color-text
+				@media all and (min-width: $phone)
+					display none
+
 			
-			
+		&__list
+			padding 0
+			list-style none
+			@media all and (max-width: $phone)
+				display none
+				
+
+		&__list-item
+			font-size 1.5rem
+			margin 10px 0
+
+		&__list-link
+			color $p-color-text
+			@extend .transition
+			&:hover
+				color $p-color
+				border-bottom 1px solid $p-color
 
 
 

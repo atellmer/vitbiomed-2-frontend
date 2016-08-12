@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
-	<link rel="stylesheet" href="dist/bundle.css?rev=5f129f05081825e8650e52f1fc48a941">
+	<link rel="stylesheet" href="dist/bundle.css?rev=2891d6ac67e92c71ac6604154dde1190">
 	<!--?rev=@@hash-->
 </head>
 
@@ -263,7 +263,7 @@
 		</div>
 	</div>
 
-	<div class="main-page">
+	<div ng-controller="MainPageController as main" class="main-page">
 		<div class="slider">
 			<div class="container">
 				<vit-slider delay="8000" attr-selector="'item'">
@@ -302,7 +302,131 @@
 		</div>
 		<div class="links">
 			<div class="container">
-				
+				<div class="c-links">
+					<div width="40" class="c-links__group">
+						<div class="links__item">
+							<div class="links__item-pic links__item-pic--doc"></div>
+							<div class="links__item-content">
+								<div 
+									hm-tap="main.toggleDropdown($event)"
+									class="links__item-title">Консультации и лечение</div>
+								<ul dropdown-list class="links__list">
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Педиатрия</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Гастроэнтерология</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Отоларингология</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Семейная медицина</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Хирургия</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Неврология</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Эндокринология</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Неврология</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Физиотерапия</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Гинекололгия</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Урология</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Функциональная диагностика</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div width="60" class="c-links__group">
+						<div width="50" class="links__item">
+							<div class="links__item-pic links__item-pic--scope"></div>
+							<div class="links__item-content">
+								<div 
+									hm-tap="main.toggleDropdown($event)"
+									class="links__item-title">Диагностика</div>
+								<ul dropdown-list class="links__list">
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Анализы</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Экспресс-диагностика</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">УЗИ</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">ЭКГ</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div width="50" class="links__item">
+							<div class="links__item-pic links__item-pic--attach"></div>
+							<div class="links__item-content">
+								<div 
+									hm-tap="main.toggleDropdown($event)"
+									class="links__item-title">Программы прикрепления</div>
+								<ul dropdown-list class="links__list">
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Программа ОМС</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Программа ОМС+</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div width="50" class="links__item">
+							<div class="links__item-pic links__item-pic--complex"></div>
+							<div class="links__item-content">
+								<div 
+									hm-tap="main.toggleDropdown($event)"
+									class="links__item-title">Комплексные программы</div>
+								<ul dropdown-list class="links__list">
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Годовое обслуживание</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Годовое обслуживание семьи</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Ведение беременности</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div width="50" class="links__item">
+							<div class="links__item-pic links__item-pic--add"></div>
+							<div class="links__item-content">
+								<div 
+									hm-tap="main.toggleDropdown($event)"
+									class="links__item-title">Дополнительно</div>
+								<ul dropdown-list class="links__list">
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Справки и больничные листы</a>
+									</li>
+									<li class="links__list-item">
+										<a href="#" class="links__list-link">Вызов врача</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -314,10 +438,11 @@
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/hammerjs/hammer.min.js"></script>
 	<script src="bower_components/angular-hammer/angular-hammer.js"></script>
+	<script src="bower_components/device.js/lib/device.min.js"></script>
 	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
 	<script src="bower_components/angular-aria/angular-aria.min.js"></script>
 	<script src="bower_components/angular-material/angular-material.min.js"></script>
-	<script src="dist/bundle.js?rev=80cfe17854b9e531653a0d417a043698"></script>
+	<script src="dist/bundle.js?rev=7cc7f6f91d3447610f1511c849f86900"></script>
 
 </body>
 
