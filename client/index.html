@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
-	<link rel="stylesheet" href="dist/bundle.css?rev=8ca9d7f95768126e0e54887ac948bd3e">
+	<link rel="stylesheet" href="dist/bundle.css?rev=5c77a0ff66a17429ebff4f140dc8fb4d">
 	<!--?rev=@@hash-->
 </head>
 
@@ -429,6 +429,14 @@
 				</div>
 			</div>
 		</div>
+		<div class="map">
+			<vit-location 
+				center="[55.755826, 37.6173]" 
+				zoom="11" 
+				clinics="main.clinics"
+				class="vit-google-map">
+			</vit-location>
+		</div>
 	</div>
 
 
@@ -442,7 +450,8 @@
 	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
 	<script src="bower_components/angular-aria/angular-aria.min.js"></script>
 	<script src="bower_components/angular-material/angular-material.min.js"></script>
-	<script src="dist/bundle.js?rev=ce0c8c838520caf726f4c29be0410468"></script>
+	<script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+	<script src="dist/bundle.js?rev=8aac96290f3e8d53413e9cd38f7aa35f"></script>
 
 </body>
 

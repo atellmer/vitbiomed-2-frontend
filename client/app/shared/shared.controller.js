@@ -31,6 +31,7 @@
 
 		function activate() { }
 
+
 		function setSelectedClinic(clinic) {
 			vm.select.clinic = clinic;
 		}

@@ -11,7 +11,8 @@
 	function vitFunc() {
 		var service = {
 			makeArrayOf: makeArrayOf,
-			getCurIndexObjectInArray: getCurIndexObjectInArray
+			getCurIndexObjectInArray: getCurIndexObjectInArray,
+			isScrollDesktop: isScrollDesktop,
 		};
 
 		return service;
@@ -33,6 +34,14 @@
 				}
 			}
 			return -1;
+		}
+
+		function isScrollDesktop() {
+			if (window.innerWidth !== document.documentElement.clientWidth) {
+				return true;
+			}
+
+			return false;
 		}
 	}
 })();

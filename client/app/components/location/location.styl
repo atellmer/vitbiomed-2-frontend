@@ -1,0 +1,79 @@
+@import 'nib'
+
+
+@keyframes marker-tooltip {
+	0% {
+		transform scale(0, 0)
+	}
+	20% {
+		transform scale(1.2, 1.1)
+	}
+	60% {
+		transform scale(0.9, 0.8)
+	}
+	100% {
+		transform scale(1, 1)
+	}
+}
+
+
+.vit-location
+	width auto
+	height auto
+	
+	&__frame
+		width 100%
+		height 450px
+
+	&__marker
+		position relative
+		width 16px
+		height 16px
+		background-color #f57c00
+		border-radius 50%
+		z-index 1
+		cursor pointer
+		&:hover
+			.vit-location__tooltip
+				visibility visible
+				opacity 1
+				animation marker-tooltip .2s 1 ease-in-out
+
+	&__tooltip
+		position absolute
+		visibility hidden
+		width 220px
+		opacity 0
+		font-weight 300
+		background-color #fff
+		padding 20px
+		border-radius 2px
+		transition all .2s ease-in-out
+		z-index 2
+		transform-origin 0 0
+		margin -43px 0 0 60px
+		&:before
+			content ''
+			position absolute
+			top 50%
+			left -53px
+			width 53px
+			height 8px
+			transform translate(0, -50%)
+			@extend .cover
+			background-image url(../resources/icons/cursor.png)
+
+
+	&__title
+		color #f57c00
+		font-size 1.2rem
+		margin 5px 0
+
+	&__address
+		color #000
+
+	&__phone
+		color #000
+
+	
+

@@ -13,6 +13,29 @@
 
 		var dropdownDelay = 300;
 
+		vm.clinics = [
+			{
+				address: 'Москва, м. Новоясневская, Новоясеневский проспект, д. 25',
+				phone: '+7 (495) 867-18-19',
+			},
+			{
+				address: 'Москва, Новорязанская ул. 36',
+				phone: '+7 (495) 867-18-19',
+			},
+			{
+				address: 'Москва, Тучковская ул. 6',
+				phone: '+7 (495) 867-18-19',
+			},
+			{
+				address: 'Москва, Большая Татарская ул. 6',
+				phone: '+7 (495) 867-18-19',
+			},
+			{
+				address: 'Москва, Александра Невского ул. 27',
+				phone: '+7 (495) 867-18-19',
+			},
+		];
+
 		vm.toggleDropdown = toggleDropdown;
 		
 
@@ -20,7 +43,7 @@
 
 		////////////////
 		function activate() { 
-			document.addEventListener('resize', resizeHandler);
+			window.addEventListener('resize', resizeHandler);
 		}
 
 		function toggleDropdown(event) {

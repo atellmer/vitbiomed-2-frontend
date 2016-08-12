@@ -65,7 +65,6 @@ gulp.task('connect', function () {
 //component-scripts
 gulp.task('component-scripts', function () {
 	task.componentScripts = gulp.src([
-		path.app() + '**/app.module.js',
 		path.app() + '**/*.module.js',
 		path.app() + '**/*.config.js',
 		path.app() + '**/*.service.js',
@@ -167,6 +166,5 @@ gulp.task('default', [
 	'component-styles',
 	'component-templates',
 	'sprite',
-	'hash-files',
 	'watch'
 ]);
