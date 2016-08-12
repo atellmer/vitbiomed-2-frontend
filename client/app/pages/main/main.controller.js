@@ -25,17 +25,23 @@
 
 		function toggleDropdown(event) {
 			var target = angular.element(event.target).siblings('[dropdown-list]');
+			var wWindow = $(window).width();
+			var scrollDesktop = isScrollDesktop();
+			var shift = scrollDesktop ? 17 : 0;
+			var fullWidth = wWindow + shift;
+			var phone = 640;
 			
+			if (fullWidth < phone) {
+				if (!target.is(':visible')) {
+					target.show(dropdownDelay);
 
-			if (!target.is(':visible')) {
-				target.show(dropdownDelay);
+					return;
+				}
+				if (target.is(':visible')) {
+					target.hide(dropdownDelay);
 
-				return;
-			}
-			if (target.is(':visible')) {
-				target.hide(dropdownDelay);
-
-				return;
+					return;
+				}
 			}
 		}
 
