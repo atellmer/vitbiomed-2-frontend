@@ -20,7 +20,7 @@
 
 		////////////////
 		function activate() { 
-			document,addEventListener('resize', resizeHandler);
+			document.addEventListener('resize', resizeHandler);
 		}
 
 		function toggleDropdown(event) {
