@@ -21,6 +21,7 @@
 		vm.select = {
 			clinic: '',
 		}; 
+		vm.currentYear = new Date().getFullYear();
 
 		vm.toggleVisibility = toggleVisibility;
 		vm.setSelectedClinic = setSelectedClinic;

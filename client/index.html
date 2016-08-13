@@ -19,7 +19,6 @@
 	<header class="header">
 		<div class="container">
 			<div class="c-header">
-
 				<div class="c-header__group only-mobile-visible">
 					<nav class="menu menu--mobile">
 						<div 
@@ -195,12 +194,14 @@
 			</div>
 		</div>
 	</header>
+
 	<div ng-if="shared.visibility.mobileSearch" class="tablet-search">
 		<div class="tablet-search__btn">
 			<i class="tablet-search__icon"></i>
 		</div>
 		<input ng-model="shared.search" type="text" class="tablet-search__input" placeholder="Поиск">
 	</div>
+
 	<div class="phone-search">
 		<div class="phone-search__btn">
 			<i class="phone-search__icon"></i>
@@ -264,7 +265,7 @@
 		</div>
 	</div>
 
-	<div ng-controller="MainPageController as main" class="main-page">
+	<section ng-controller="MainPageController as main" class="main-page">
 		<div class="slider">
 			<div class="container">
 				<vit-slider delay="8000" attr-selector="'item'">
@@ -527,15 +528,140 @@
 							Были у нас на приеме?
 						</div>
 						<div class="feedback__btn">
-							<button class="btn vit-btn vit-btn--white">Оставьте отзыв!</button>
+							<button class="btn vit-btn vit-btn--white vit-btn--large-font">Оставьте отзыв!</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-	</div>
+	</section>
 
+	<footer class="footer">
+		<div class="container">
+			<div class="c-footer">
+				<div class="c-footer__group">
+					<div class="footer__title">О нас</div>
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Врачи</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Клиники</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Отзывы</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Программа «Доктор Рядом»</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Новости</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Частые вопросы</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">СМИ о нас</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Пресс-кит</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Контакты</a>
+						</li>
+					</ul>
+				</div>
+				<div class="c-footer__group">
+					<div class="footer__title">Пациентам</div>
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Как лечиться бесплатно</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Программы прикрепления</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Комплексные обследования</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Акции и скидки</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Стоимость услуг</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Подписка на рассылку</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Блог</a>
+						</li>
+					</ul>
+				</div>
+				<div class="c-footer__group">
+					<div class="footer__title">Компаниям</div>
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Презентация о компании</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Корпоративные программы</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Профосмотры</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Наши партнеры</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link">Коммерческое предложение</a>
+						</li>
+					</ul>
+				</div>
+				<div class="c-footer__group without-phone-visible">
+					<div class="footer__title">Мы в соцсетях</div>
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link footer__social-link footer__social-link--vk">Вконтакте</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link footer__social-link footer__social-link--fb">Facebook</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link footer__social-link footer__social-link--ig">Instagram</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link footer__social-link footer__social-link--yt">YouTube</a>
+						</li>
+					</ul>
+				</div>
+				<div class="c-footer__group only-desktop-visible">
+					<div class="mailing">
+						<div class="mailing__gift">
+							<i class="mailing__gift-icon"></i>
+							<div class="mailing__gift-text">
+								Подпишитесь на рассылку и получите в подарок книгу 
+								<a href="#" class="mailing__gift-link">«Здоровые привычки»</a>
+							</div>
+						</div>
+						<form class="mailing__form">
+							<input type="email" name="email" placeholder="Email" class="form-control mailing__input">
+							<button width="100" class="btn vit-btn vit-btn--green vit-btn--no-side-margin">Подписаться</button>	
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="c-copyright">
+					<div class="copyright__logo">
+						<div class="copyright__logo-item copyright__logo-item--1"></div>
+						<div class="copyright__logo-item copyright__logo-item--2"></div>
+					</div>
+					<div class="copyright__sign">Витбиомед+ &copy {{ ::shared.currentYear }}</div>
+				</div>	
+			</div>
+		</div>
+	</footer>
 
 	</div>
 
