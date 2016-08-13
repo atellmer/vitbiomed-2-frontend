@@ -22,14 +22,8 @@ var path = {
 	app: function () {
 		return this.root + 'app/'
 	},
-	shared: function () {
-		return this.app() + 'shared/'
-	},
 	components: function () {
 		return this.app() + 'components/'
-	},
-	pages: function () {
-		return this.app() + 'pages/'
 	},
 	icons: function () {
 		return this.root + 'resources/icons/'
@@ -89,9 +83,8 @@ gulp.task('component-scripts', function () {
 //component-styles
 gulp.task('component-styles', function () {
 	task.componentStyles = gulp.src([
-		path.shared() + '**/shared.styl',
-		path.components() + '**/*.styl',
-		path.pages() + '**/*.styl',
+		path.app() + '**/shared.styl',
+		path.app() + '**/*.styl',
 	])
 		.pipe(concat('bundle.styl'))
 		.pipe(stylus({
@@ -150,12 +143,10 @@ gulp.task('image-min', function () {
 
 //watch
 gulp.task('watch', function () {
-	gulp.watch(path.app() + '**/*.js', ['component-scripts', 'hash-files']);
+	gulp.watch(path.app() + '**/*.js', ['component-scripts']);
 	gulp.watch([
-		path.shared() + '**/shared.styl',
-		path.components() + '**/*.styl',
-		path.pages() + '**/*.styl',
-	], ['component-styles', 'hash-files']);
+		path.app() + '**/shared.styl',
+		path.app() + '**/*.styl'], ['component-styles']);
 	gulp.watch(path.root + '**/*.html', ['component-templates']);
 	gulp.watch(path.icons() + 'source/**/*.{jpg,jpeg,png}', ['sprite']);
 });
