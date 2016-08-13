@@ -6,14 +6,14 @@
 		.module('vit.pages')
 		.controller('MainPageController', MainPageController);
 
-	MainPageController.$inject = [];
+	MainPageController.$inject = ['$timeout'];
 
-	function MainPageController() {
+	function MainPageController($timeout) {
 		var vm = this;
 
 		var dropdownDelay = 300;
 
-		vm.clinics = [
+		vm.clinicsLocations = [
 			{
 				address: 'Москва, м. Новоясневская, Новоясеневский проспект, д. 25',
 				phone: '+7 (495) 867-18-19',
@@ -36,7 +36,10 @@
 			},
 		];
 
+		vm.selectedClinic = '';
+
 		vm.toggleDropdown = toggleDropdown;
+		vm.showSelectedClinic = showSelectedClinic;
 		
 
 		activate();
@@ -44,6 +47,12 @@
 		////////////////
 		function activate() { 
 			window.addEventListener('resize', resizeHandler);
+		}
+
+		function showSelectedClinic() {
+			$timeout(function() {
+				console.log('selected clinic: ', vm.selectedClinic);
+			}, 0);	
 		}
 
 		function toggleDropdown(event) {

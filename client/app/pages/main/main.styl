@@ -163,10 +163,61 @@
 				color $p-color
 				border-bottom 1px solid $p-color
 
+	.map
+		position relative
 
 	.vit-google-map
 		@media all and (max-width: $phone)
 			display none
+
+	.clinics
+		position relative
+		background-color #fff
+		padding 0 15px
+		zoom 1.01
+		@media all and (min-width: $phone)
+			position absolute
+			z-index 2
+			top 50%
+			transform translate(0, -50%)
+			padding 30px 40px
+
+		&__title
+			font-weight 300
+			margin 20px 0
+
+		&__list
+			list-style none
+			padding 0
+			margin 0
+
+		&__list-link
+			@extend .transition
+			&:hover
+				color #f57c00
+				border-bottom 1px solid #f57c00
+
+	md-radio-button
+		margin-bottom 12px
+		[ng-transclude]
+			pointer-events auto
+
+	.c-btn
+		@extend .flex
+		flex-flow column wrap
+		justify-content space-between
+		margin 50px 0
+		@media all and (min-width: $phone)
+			flex-flow row wrap
+			margin 0 -10px
+
+	.vit-btn
+		@media all and (max-width: $phone)
+			width 100%
+
+
+
+	
 
 
 
