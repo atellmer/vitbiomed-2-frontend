@@ -6,9 +6,9 @@
 		.module('vit.pages')
 		.controller('MainPageController', MainPageController);
 
-	MainPageController.$inject = ['$timeout'];
+	MainPageController.$inject = ['$timeout', 'vitFunc'];
 
-	function MainPageController($timeout) {
+	function MainPageController($timeout, vitFunc) {
 		var vm = this;
 
 		var dropdownDelay = 300;
@@ -58,7 +58,7 @@
 		function toggleDropdown(event) {
 			var target = angular.element(event.target).siblings('[dropdown-list]');
 			var wWindow = $(window).width();
-			var scrollDesktop = isScrollDesktop();
+			var scrollDesktop = vitFunc.isScrollDesktop();
 			var shift = scrollDesktop ? 17 : 0;
 			var fullWidth = wWindow + shift;
 			var phone = 640;
@@ -80,7 +80,7 @@
 		function resizeHandler() {
 			var wWindow = $(window).width();
 			var dropdownAll = document.querySelectorAll('[dropdown-list]');
-			var scrollDesktop = isScrollDesktop();
+			var scrollDesktop = vitFunc.isScrollDesktop();
 			var shift = scrollDesktop ? 17 : 0;
 			var fullWidth = wWindow + shift;
 			var phone = 640;
@@ -94,14 +94,6 @@
 					angular.element(dropdownAll[i]).hide(dropdownDelay);
 				}
 			}
-		}
-
-		function isScrollDesktop() {
-			if (window.innerWidth !== document.documentElement.clientWidth) {
-				return true;
-			}
-
-			return false;
 		}
 	}
 })();

@@ -133,27 +133,30 @@
 				content ''
 				display inline-block
 				position relative
-				top 7px
+				top 5px
 				left 0
-				width 30px
-				height 30px
-				margin-right 10px	
+				width 24px
+				height 24px
+				margin-right 7px	
 				border-radius 50%
-				border 1px solid $p-color-text
+				border 2px solid $p-color-text
 				@media all and (min-width: $phone)
 					display none
 
 			
 		&__list
-			padding 0
 			list-style none
+			padding-left 30px
+			margin 0
 			@media all and (max-width: $phone)
 				display none
+			@media all and (min-width: $phone)
+				padding-left 0
 				
 
 		&__list-item
 			font-size 1.5rem
-			margin 10px 0
+			margin-bottom 8px
 
 		&__list-link
 			color $p-color-text
@@ -226,7 +229,7 @@
 		background-color #fff
 		padding 0 15px
 		@extend .flex
-		@media all and (min-width: $notebook)
+		@media all and (min-width: 1200px)
 			padding 0
 
 		.c-feedback

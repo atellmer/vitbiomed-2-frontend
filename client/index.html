@@ -541,8 +541,10 @@
 		<div class="container">
 			<div class="c-footer">
 				<div class="c-footer__group">
-					<div class="footer__title">О нас</div>
-					<ul class="footer__list">
+					<div 
+						hm-tap="shared.toggleDropdown($event)" 
+						class="footer__title">О нас</div>
+					<ul dropdown-list class="footer__list">
 						<li class="footer__list-item">
 							<a href="#" class="footer__list-link">Врачи</a>
 						</li>
@@ -573,8 +575,10 @@
 					</ul>
 				</div>
 				<div class="c-footer__group">
-					<div class="footer__title">Пациентам</div>
-					<ul class="footer__list">
+					<div 
+						hm-tap="shared.toggleDropdown($event)" 
+						class="footer__title">Пациентам</div>
+					<ul dropdown-list class="footer__list">
 						<li class="footer__list-item">
 							<a href="#" class="footer__list-link">Как лечиться бесплатно</a>
 						</li>
@@ -599,8 +603,10 @@
 					</ul>
 				</div>
 				<div class="c-footer__group">
-					<div class="footer__title">Компаниям</div>
-					<ul class="footer__list">
+					<div 
+						hm-tap="shared.toggleDropdown($event)" 
+						class="footer__title">Компаниям</div>
+					<ul dropdown-list class="footer__list">
 						<li class="footer__list-item">
 							<a href="#" class="footer__list-link">Презентация о компании</a>
 						</li>
@@ -619,8 +625,9 @@
 					</ul>
 				</div>
 				<div class="c-footer__group without-phone-visible">
-					<div class="footer__title">Мы в соцсетях</div>
-					<ul class="footer__list">
+					<div hm-tap="shared.toggleDropdown($event)"  
+						class="footer__title">Мы в соцсетях</div>
+					<ul dropdown-list class="footer__list">
 						<li class="footer__list-item">
 							<a href="#" class="footer__list-link footer__social-link footer__social-link--vk">Вконтакте</a>
 						</li>
@@ -659,6 +666,12 @@
 					</div>
 					<div class="copyright__sign">Витбиомед+ &copy {{ ::shared.currentYear }}</div>
 				</div>	
+			</div>
+			<div class="social">
+				<a href="#" class="social__link social__link--vk"></a>
+				<a href="#" class="social__link social__link--fb"></a>
+				<a href="#" class="social__link social__link--ig"></a>
+				<a href="#" class="social__link social__link--yt"></a>
 			</div>
 		</div>
 	</footer>

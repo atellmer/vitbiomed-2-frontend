@@ -30,11 +30,18 @@
 	&__title
 		font-size 2.1rem
 		margin-bottom 20px
+		cursor pointer
+		@media all and (min-width: $phone)
+			cursor default
 
 	&__list
 		list-style none
-		padding 0
+		padding-left 30px
 		margin 0
+		@media all and (max-width: $phone)
+			display none
+		@media all and (min-width: $phone)
+			padding-left 0
 
 	&__list-item
 		font-size 1.6rem
@@ -165,4 +172,29 @@
 			text-align right
 			color #a0a0a0
 			margin-top 15px
+
+
+	.social
+		width 100%
+		@extend .flex
+		@media all and (min-width: $phone)
+			display none
+
+		&__link
+			width 48px
+			height 48px
+			margin 10px
+			@extend .cover
+
+			&--vk
+				background-image url(../resources/icons/vk-b.svg)
+
+			&--fb
+				background-image url(../resources/icons/fb-b.svg)
+
+			&--ig
+				background-image url(../resources/icons/ig-b.svg)
+
+			&--yt
+				background-image url(../resources/icons/yt-b.svg)
 
