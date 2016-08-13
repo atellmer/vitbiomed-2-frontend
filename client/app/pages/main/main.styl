@@ -123,11 +123,10 @@
 
 		&__item-title
 			position relative
-			font-size 2.3rem
+			font-size 1.8rem
 			margin-bottom 20px
 			cursor pointer
 			@media all and (min-width: $phone)
-				font-size 1.8rem
 				cursor default
 
 			&:before
@@ -181,6 +180,7 @@
 			top 50%
 			transform translate(0, -50%)
 			padding 30px 40px
+			background-color #fcfcfc
 
 		&__title
 			font-weight 300
@@ -197,23 +197,87 @@
 				color #f57c00
 				border-bottom 1px solid #f57c00
 
-	md-radio-button
-		margin-bottom 12px
-		[ng-transclude]
-			pointer-events auto
+		md-radio-button
+			margin-bottom 12px
+			[ng-transclude]
+				pointer-events auto
 
-	.c-btn
+		.c-btn
+			@extend .flex
+			flex-flow column wrap
+			justify-content space-between
+			margin 50px 0
+			@media all and (min-width: $phone)
+				flex-flow row wrap
+				margin 0 -10px
+
+		.vit-btn
+			@media all and (max-width: $phone)
+				width 100%
+
+
+	.feedback
+		width 100%
+		height auto
+		min-height 200px
+		background-color #fff
+		padding 0 15px
 		@extend .flex
-		flex-flow column wrap
-		justify-content space-between
-		margin 50px 0
-		@media all and (min-width: $phone)
-			flex-flow row wrap
-			margin 0 -10px
+		@media all and (min-width: $notebook)
+			padding 0
 
-	.vit-btn
-		@media all and (max-width: $phone)
-			width 100%
+		.c-feedback
+			@extend .flex
+			flex-flow column wrap
+			justify-content space-between
+			align-items stretch
+			@media all and (min-width: $phone)
+				flex-flow row wrap
+
+			&__group
+				flex 1
+				@extend .flex
+				flex-flow row nowrap
+				justify-content center
+				align-items center
+				margin 20px 0
+				@media all and (min-width: $phone)
+					margin 0
+				@media all and (min-width: $notebook)
+					justify-content flex-start
+
+		&__title
+			font-size 2.1rem
+			@media all and (max-width: 480px)
+				font-size 1.8rem
+
+			&--2
+				@media all and (max-width: $notebook)
+					display none
+
+		&__btn
+			@extend .flex
+			margin 0 30px
+
+		.question
+			@extend .flex
+			flex-flow row nowrap
+			justify-content space-between
+			
+			&__circle
+				display inline-block
+				width 12px
+				height 12px
+				border 1px solid #f57c00
+				border-radius 50%
+				margin-right 20px
+
+			&__btn
+				width 60px
+				height 60px
+				@extend .cover
+				background-image url(../resources/icons/question-o.svg)
+				cursor pointer
 
 
 
