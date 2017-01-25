@@ -36,7 +36,7 @@
 		var vm = this;
 
 		var host = $element.find('.vit-slider');
-		var delay = vm.delay || 1000;
+		var delay = vm.delay || 8000;
 		var timer = {
 			name: [],
 		};
